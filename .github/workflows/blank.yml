@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Cue autogen
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      
+      - name: Setup CUE environment
+        # You may pin to the exact commit or the version.
+        # uses: cue-lang/setup-cue@143c2fe537047bf8c7ead6a30784ad1802e9d991
+        uses: cue-lang/setup-cue@v1.0.0-alpha.2
+        with:
+          # The CUE version to setup. Must be a valid semantic version string like "v0.4.0" or "latest"    
+          version: "v0.4.0"
+
+      - name: Run cue script
+        run: ./gen_yaml.sh
+
+      - name: Update files on GitHub
+        uses: test-room-7/action-update-file@v1.6.
+        with:
+          file-path: "./*.yaml"
+          commit-msg: Update resources
+          github-token: ${{ secrets.GITHUB_TOKEN }}
