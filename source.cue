@@ -2,5 +2,5 @@ package example
 
 greeting: {
   name: string
-  message: "Hello, \(name)!"
+  message: "Hello, \(name)! How are you?"
 }
