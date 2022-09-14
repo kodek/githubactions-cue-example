@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cue export ./people/... --out yaml > people.yaml
+cue export ./people/... --out yaml > ./out/people.yaml

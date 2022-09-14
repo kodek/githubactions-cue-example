@@ -1,7 +1,0 @@
-greeting:
-  name: world
-  message: Hello, world!
----
-greeting:
-  name: you
-  message: Hello, you!
