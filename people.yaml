@@ -1,7 +1,7 @@
-value:
+greeting:
   name: world
-  greeting: Hello, world!
+  message: Hello, world!
 ---
-value:
+greeting:
   name: you
-  greeting: Hello, you!
+  message: Hello, you!
