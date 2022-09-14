@@ -34,8 +34,11 @@ jobs:
           # The CUE version to setup. Must be a valid semantic version string like "v0.4.0" or "latest"    
           version: "v0.4.0"
 
-      - name: Run cue script
-        run: ./gen_yaml.sh
+      - name: Validate CUE files
+        run: ./scripts/cue_validate.sh
+
+      - name: Generate YAML output
+        run: ./scripts/gen_yaml.sh
 
       - name: Update files on GitHub
         uses: test-room-7/action-update-file@v1.6.0

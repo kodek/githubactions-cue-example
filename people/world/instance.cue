@@ -1,3 +1,3 @@
 package example
 
-value: name: "world"
+greeting: name: "world"
