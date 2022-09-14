@@ -1,7 +1,7 @@
 greeting:
   name: world
-  message: Hello, world! How are you?
+  message: Hello, world!
 ---
 greeting:
   name: you
-  message: Hello, you! How are you?
+  message: Hello, you!
