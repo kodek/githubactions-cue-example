@@ -1,6 +1,6 @@
 package example
 
-value: {
+greeting: {
   name: string
-  greeting: "Hello, \(name)!"
+  message: "Hello, \(name)!"
 }
