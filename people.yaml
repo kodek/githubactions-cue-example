@@ -1,0 +1,7 @@
+value:
+  name: world
+  greeting: Hello, world!
+---
+value:
+  name: you
+  greeting: Hello, you!
