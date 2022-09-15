@@ -1,6 +1,6 @@
 # githubactions-cue-example
 
-Demo project to automatically generate denormalized YAML files from CUE configs.
+Demo project to automatically generate YAML configs from normalized CUE configs.
 
 ```mermaid
 flowchart LR
