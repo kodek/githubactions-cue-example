@@ -5,7 +5,7 @@ Demo project to automatically generate denormalized YAML files from CUE configs.
 ```mermaid
 flowchart LR
   subgraph CUE configs
-    subgraph "Schema"
+    subgraph "Base"
       S[./source.cue]
     end
     subgraph "Package instances"
